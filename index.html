@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontGoogle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> 
+    <!-- Start FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End FontAwesome -->
+    <!-- START Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--    END Bootstrap -->
+    <title>Welcomme</title>
+</head>
+<body>
+    <div class="side-bar">
+        <h2>AZAYER</h2>
+        <p>.ma</p>
+    
+        <div class="menu">
+            <div class="item">
+                <a href="#" id="homeb"><i class='fa fa-dashboard'></i></i>Dashboard</a>
+            </div>
+
+            <div class="item">
+                <a href="#" id="prodb"><i class="fab fa-product-hunt"></i>Products</a>
+            </div>
+
+            <div class="item">
+                <a class="sub-btn">Clients<i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    
+                    <div>
+                        <a href="#" id="transb"><i class="fas fa-file-invoice-dollar"></i>Transactions</a>
+                    </div>
+                    <div>
+                        <a href="#" id="cltsb"><i class="fa-solid fa-user-group"></i>Clients</a>
+                    </div>
+                    <div>
+                        <a href="#" id="fctb"><i class="fa-solid fa-file-lines"></i>Factures</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="sub-btn">Fournissurs<i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <div><a href="#"><i class="fas fa-file-invoice-dollar"></i>Transactions</a></div>
+                    <div><a href="#"><i class="fa-solid fa-user-group"></i>Clients</a></div>
+                    <div><a href="#"><i class="fa-solid fa-file-lines"></i>Factures</a></div>
+                </div>
+            </div>  
+        </div>  
+    </div>
+    <!--START HOME DASHBOARD-->
+        <div class="container home" id="home" style="display:;">
+            <nav>
+                <h2>Dashboard</h2>
+                <div class="menu">
+                    <h3>10:35:01</h3>
+                    <div>
+                        <img src="img/notification.png">
+                    </div> 
+                    <button id="addf">Add Facture</button>
+                </div>
+            </nav>
+            <!--  -->
+            <div class="top_dashboard">
+                <h2>Hello mohamed</h2>
+                <p>Welcomme Back</p>
+                <div class="dash">
+                    <div>
+                        <div class="desc">
+                            <h3>Sales</h3>
+                            <p>5757</p>
+                        </div>
+                        <div>
+                            <img src="img/Group 2311(1).png">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <h3>Client</h3>
+                            <p>5757</p>
+                        </div>
+                        <div>
+                            <img src="img/Group 2308.png">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <h3>Products</h3>
+                            <p>5757</p>
+                        </div>
+                        <div>
+                            <img src="img/Group 2420.png">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <h3>Transactions</h3>
+                            <p>5757</p>
+                        </div>
+                        <div>
+                            <img src="img/Group 2421(1).png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="analytics">
+                <div class="dash-analytics">
+                    <h2>Analytics</h2>
+                     <div class="chartSect">
+                            <div class="nav-chart">
+                                <button id="c1">Sales</button>
+                                <button id="c2">Clients</button>
+                                <button id="c3">Fournisseur</button>
+                                <button id="c4">transactions</button>
+                                <button id="c5">Products</button>
+                            </div>
+                            <!-- Chart Goes Here -->
+                            <div class="chart-cont">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                    </div>
+                </div>
+                <div class="last-transactions">
+                    <h2>Last transactions</h2>
+                    <div>
+                        <div class="search">
+                            <input type="text" name="search" placeholder="Search on Transactions By name">
+                            <img src="img/Group 2019.png">
+                        </div>
+                        <table>
+                              <thead>
+                                    <tr>
+                                      <th scope="col">client</th>
+                                      <th scope="col">Montant</th>
+                                      <th scope="col">date</th>
+                                      <th scope="col">more</th>
+                                    </tr>
+                              </thead>
+                              <tbody id="tb_frontfct">
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--END HOME DASHBOARD-->
+    <!--START Transaction List-->
+        <div class="container transaction" id="trans" style="display:none;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div>
+                  <div>
+                     <h3>Transaction List</h3>
+                     <p>154 Items</p>
+                  </div>
+                  <button class="btn btn-primary">Add Item</button>
+                </div>
+          </nav>
+            <div class="partSearch">
+                <div class="input-group mb-3 mt-3">
+                  <input type="text" class="form-control" placeholder="Recipient's username" >
+                  <img src="img/Group 2019(1).png">
+                </div>
+                <button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+                <button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div style="width: 100%;height: 500px; position: relative;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">name</th>
+                      <th scope="col">Montant</th>
+                      <th scope="col">espace</th>
+                      <th scope="col">cheque</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">options</th>
+
+                    </tr>
+                  </thead>
+                  <tbody id="tb_trans">
+                    
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    <!--END Transaction List-->
+    <!--START Product List-->
+        <div class="container product-list" id="prod" style="display:none;">
+                <div id="Dashboard">
+                <div id="headerTitle">
+                <div>
+                    <h2>Product List</h2>
+                    <p>154 Items</p>
+                </div>
+                <button id="AddFacture">Add Product</button>
+                </div>
+                <div class="searchBar">
+                    <input type="text" placeholder="Search for a product">
+                    <select name="Filter" id="" value="Filter by">
+                            <option value="">Filter by</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                    </select>
+                    <select name="Sort" id="" value="Sort by">
+                            <option value="">Sort By</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                    </select>
+                </div>
+                <div class="tableList">
+                    <table class="table table-striped border">
+                      <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                                <th>prix HT</th>
+                                <th>prix TTC</th>
+                                <th>Status</th>
+                                <th>Stock</th>
+                                <th>Total Sales</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_art">
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <!--END Product List-->
+    <!--START Client List-->
+        <div class="container transaction" id="clts" style="display:none;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div>
+                  <div>
+                     <h3>Clients List</h3>
+                     <p>154 Items</p>
+                  </div>
+                  <button class="btn btn-primary">Add Item</button>
+                </div>
+          </nav>
+            <div class="partSearch">
+                <div class="input-group mb-3 mt-3">
+                  <input type="text" class="form-control" placeholder="Recipient's username" >
+                  <img src="img/Group 2019(1).png">
+                </div>
+                <button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+                <button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div style="width: 100%;height: 500px; position: relative;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">name</th>
+                      <th scope="col">Montant</th>
+                      <th scope="col">espace</th>
+                      <th scope="col">cheque</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">options</th>
+
+                    </tr>
+                  </thead>
+                  <tbody id="tb_clts">
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    <!--END Client List-->
+    <!-- START REGELEMENT -->
+     <div class="big_reglement" style="display:none;" id='regl'>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="facture-card reglement">
+            <div class="container">
+                <div class="heading">
+                    <h1>Réglement</h1>
+                    <p id="frm-hlp">Chiffre : <input type="number" id="rg_mt" disabled value=33400></p>
+                </div>
+                <!--  -->
+                <div class="inputBox">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Montant Espece</label>
+                      <input type="number" class="form-control" id="rg_es" aria-describedby="emailHelp" placeholder="Enter Montant DH">
+                  </div>
+                  <button id="sdam">+</button>
+                </div>
+                <!--  -->
+               <table class="table table-striped table-hover">
+                  <thead>
+                      <tr>
+                          <th>Photo</th>
+                          <th>Date</th>
+                          <th>Montant</th>
+                      </tr>
+                  </thead>
+                  <tbody id="chit">
+                  </tbody>
+                </table>
+                <button class="send" id="sdas">SEND</button>          
+            </div>
+     </div>
+     </div>
+    <!-- END REGELEMENT -->
+    <!-- START PARTITION -->
+     <div class="big_reglement partition" style="display:none;" id="part">
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="facture-card reglement">
+            <div class="container">
+                <div class="heading">
+                    <h1>Partition</h1>
+                    <p id="frm-hlp">Montant : <span id="mt_part"></span> dh</p>
+                </div>
+                <!--  -->
+                <div class="inputBox">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Montant Espece</label>
+                      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0" id="chid">
+                  </div>
+                  <button id="sdame">+</button>
+                </div>
+                <p id="frm-hlp">Reste : <span id="chrest">0</span> dh</p>
+                <!--  -->
+               <table class="table table-striped table-hover">
+                  <thead>
+                      <tr>
+                          <th>Photo</th>
+                          <th>Date</th>
+                          <th>Montant</th>
+                      </tr>
+                  </thead>
+                  <tbody>   
+                  </tbody>
+                </table>
+                <button class="send" id="sendp">SEND</button>          
+            </div>
+     </div>
+     </div>
+    <!-- END PARTITION -->
+    <!-- START AVANCE -->
+     <div class="big_reglement" style="display:none;" id="av">
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="facture-card reglement avance">
+            <div class="container">
+                <div class="heading">
+                    <h1>Cheque 5</h1>
+                </div>
+                <!--  -->
+                   <div class="table-responsive" style="position: absolute;top:20%;height: 100%;width:100%;left: 0;"> 
+                        <table class="table table-bordered table-hover">
+                          <thead class="thead-dark">
+                            <tr class="table-danger">
+                              <th scope="col">NUM</th>
+                              <th scope="col">ID CHEQUE</th>
+                              <th scope="col">MONTANT</th>
+                              <th scope="col">DATE</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                    </div> 
+            </div>
+        </div>
+     </div>
+    <!-- END AVANCE -->
+    <!-- START CHEQUE -->
+     <div class="big_reglement" style="display:none;" id="chqs">
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="facture-card reglement cheque">
+            <div class="container">
+                <!--  -->
+                 <div class="aveen">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>id</th>
+                        <th>id Cheque</th>
+                        <th>Date Payment</th>
+                        <th>MTT</th>
+                        <th>AVANCE</th>
+                        <th>MTT IMPAYE</th>
+                        <th>ETAT</th>
+                        <th>DATE DE RECEPT</th>
+                      </tr>
+                    </thead>
+                    <tbody>  
+                      <tr class="success">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Valid</td>
+                        <td>2022-03-18-16:18</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Invalid</td>
+                        <td>2022-03-18-16:18</td>
+                        
+                      </tr>
+                      <tr class="danger">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Invalid</td>
+                        <td>2022-03-18-16:18</td>
+                        
+                      </tr>
+                      <tr class="danger">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Invalid</td>
+                        <td>2022-03-18-16:18</td>
+                        
+                      </tr>
+                      <tr class="danger">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Invalid</td>
+                        <td>2022-03-18-16:18</td>
+                        
+                      </tr>
+                      <tr class="danger">
+                        <td>4</td>
+                        <td>12</td>
+                        <td>2022-03-15</td>
+                        <td>77</td>
+                        <td>0</td>
+                        <td>77</td>
+                        <td>Invalid</td>
+                        <td>2022-03-18-16:18</td>
+                        
+                      </tr>
+                   
+                    
+                    
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- END CHEQUE -->
+    <!-- START AVANCE -->
+     <div class="big_reglement" style="display:none;">
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="facture-card add-facture">
+            <div class="container">
+                <div class="heading">
+                    <h1>ADD Product</h1>
+                    <p id="frm-hlp">Full This Form To Add New Product</p>
+                </div>
+                <!--  -->
+                <div class="inputBox">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Product Name">
+                  </div>
+
+                </div>
+                 <div class="inputBox">
+                  <div class="form-group1">
+                      <input type="text" class="form-control" placeholder="Prix d'achat">
+                      <input type="text" class="form-control" placeholder="Prix de vente">
+                  </div>
+                  
+                </div>
+                 <div class="inputBox">
+                   <div class="form-group1">
+                      <input type="text" class="form-control" placeholder="Prix d'achat">
+                      <input type="text" class="form-control" placeholder="Prix de vente">
+                  </div>
+                </div>
+                 <div class="inputBox">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Quantity">
+                  </div> 
+                </div>
+                  <button class="send">+ Save Product</button>  
+
+            </div>
+        </div>
+     </div>
+    <!-- END AVANCE -->
+    <!-- START FACTURE -->
+     <div class="big_reglement" style="display:none;">
+        <i class="fa-solid fa-xmark close"></i>
+            <div class="new-facture">
+                <div class="container">
+                    <div class="heading">
+                        <h1>Create New Facture</h1>
+                        <p id="frm-hlp">Full This Form To Add New Facture</p>
+                    </div>
+                    <!--  -->
+                    <div class="inputBox">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Client Name</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter The Name of The Client">
+                      </div>
+                      <button id="addFact">+</button>
+                    </div>
+                    <!--  -->
+                    <table class="table">
+                        <thead class="thead-dark">
+                          <tr id="head-table">
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantité</th>
+                            <th scope="col">HTTC</th>
+                            <th scope="col">TTC</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td><select name="" id="">
+                                <option value="volvo">Tacos</option>
+                                <option value="volvo">Orange</option>
+                                <option value="volvo">Tacos</option>
+                                <option value="volvo">Orange</option>
+                              </select></td>
+                              <th scope="row"><input type="number" value="1" name="" id=""></th>
+                              <td class="">450dh</td>
+                              <td>500</td>
+                          </tr>
+                          <tr>
+                            <td><select name="" id="">
+                              <option value="volvo">Tacos</option>
+                              <option value="volvo">Orange</option>
+                              <option value="volvo">Orange</option>
+                              <option value="volvo">Orange</option>
+                            </select></td>
+                            <th scope="row"><input type="number" value="1" name="" id=""></th>
+                            <td class="">450dh</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                          <td><select name="" id="">
+                            <option value="volvo">Tacos</option>
+                            <option value="volvo">Orange</option>
+                            <option value="volvo">Orange</option>
+                            <option value="volvo">Orange</option>
+                          </select></td>
+                          <th scope="row"><input type="number" value="1" name="" id=""></th>
+                          <td class="">450dh</td>
+                          <td>500</td>
+                      </tr>
+                      <tr>
+                        <td><select name="" id="">
+                          <option value="volvo">Tacos</option>
+                          <option value="volvo">Orange</option>
+                          <option value="volvo">Orange</option>
+                          <option value="volvo">Orange</option>
+                        </select></td>
+                        <th scope="row"><input type="number" value="1" name="" id=""></th>
+                        <td class="">450dh</td>
+                        <td>500</td>
+                    </tr>
+                      <tr>
+                        <td><select name="" id="">
+                          <option value="volvo">Tacos</option>
+                          <option value="volvo">Orange</option>
+                          <option value="volvo">Orange</option>
+                          <option value="volvo">Orange</option>
+                        </select></td>
+                        <th scope="row"><input type="number" value="1" name="" id=""></th>
+                        <td class="">450dh</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                      <td><select name="" id="">
+                        <option value="volvo">Tacos</option>
+                        <option value="volvo">Orange</option>
+                        <option value="volvo">Orange</option>
+                        <option value="volvo">Orange</option>
+                      </select></td>
+                      <th scope="row"><input type="number" value="1" name="" id=""></th>
+                      <td class="">450dh</td>
+                      <td>500</td>
+                  </tr>
+                  <tr>
+                    <td><select name="" id="">
+                      <option value="volvo">Tacos</option>
+                      <option value="volvo">Orange</option>
+                      <option value="volvo">Orange</option>
+                      <option value="volvo">Orange</option>
+                    </select></td>
+                    <th scope="row"><input type="number" value="1" name="" id=""></th>
+                    <td class="">450dh</td>
+                    <td>500</td>
+                </tr>
+                </tbody>
+              </table>
+              <button class="send">SEND</button>          
+              <div class="desc">
+                <p>Chiffre : <span>234000</span></p>
+                <p>Total : <span>434000</span></p>
+              </div>    
+            </div>
+            </div>
+     </div>
+    <!-- END FACTURE -->
+<!-- SCRIPT -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate')
+
+            });
+
+            $('.menu-btn').click(function(){
+                $('.side-bar').addClass('active');
+            });
+        });
+
+        // Desfine The Chart Section Place
+        var myChartSection = document.getElementById("myChart");
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+              backgroundColor: '#422F8A',
+              borderColor: '#422F8A',
+              borderWidth:4,
+              data: [0, 10, 30, 20, 20, 30, 45],
+            },{
+                backgroundColor: '#BEB1D5',
+                borderColor: '#BEB1D5',
+                borderWidth:4,
+                data: [0, 70, 50, 20, 45, 20, 30],
+            }]
+        };
+        //  Setup The Config of Chart 
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+        // Add Chart to The Chart Section
+        const myChart = new Chart(myChartSection,config);
+        // button close
+        const btn_close = document.querySelectorAll('.close');
+        for(var i=0;i<btn_close.length;i++){
+            btn_close[i].addEventListener('click',function(){
+                this.parentElement.style.display = "none";
+            })
+        }
+    </script>
+     
+</body>
+</html>
